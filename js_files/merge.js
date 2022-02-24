@@ -110,12 +110,19 @@ async function mergeSort(elements,l, r){
    await merge(elements,l,m,r);
 }
 
-mergeIt.addEventListener('click', ()=> {
+mergeIt.addEventListener('click', async ()=> {
     let elements = document.querySelectorAll('.bar');
     console.log(elements.length);
     let r= elements.length - 1;
-    
-    mergeSort(elements, 0, r );
+    disableSizeSlider();
+    disableNewArrayBtn();
+    disableSortingBtn();
+
+    await mergeSort(elements, 0, r );
+
+    enableNewArrayBtn();
+    enableSizeSlider();
+    enableSortingBtn();
 
 })
 

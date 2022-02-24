@@ -4,7 +4,13 @@ console.log("array before sorting",arr);
 
 bubbleSort.addEventListener('click', async () => {
   let arr = document.querySelectorAll('.bar');
-    bblSort(arr);
+  disableNewArrayBtn();
+  disableSizeSlider();
+  disableSortingBtn();
+   await bblSort(arr);
+   enableNewArrayBtn();
+   enableSizeSlider();
+   enableSortingBtn();
 })
  async function bblSort(arr){
    console.log(arr.length, arr_size.value, "arr:", arr);

@@ -1,8 +1,14 @@
 const insSort = document.getElementById('insertion');
 let n=100;
 insSort.addEventListener('click', async () => {
+    disableNewArrayBtn();
+    disableSizeSlider();
+    disableSortingBtn();
    const insertWait =await insertionSort(arr, n);
    colorGreen();
+   enableNewArrayBtn();
+   enableSizeSlider();
+   enableSortingBtn();
 })
 
 //Insertion Sort 

@@ -76,5 +76,13 @@ let quick = document.getElementById("quick");
 quick.addEventListener('click', async () => {
     let arr = document.querySelectorAll('.bar');
     console.log("quick sort func called with value : ", arr, 0, arr.length-1)
-    quickSort(arr, 0, arr.length-1)
+    disableNewArrayBtn();
+    disableSizeSlider();
+    disableSortingBtn();
+    
+    await quickSort(arr, 0, arr.length-1)
+
+    enableNewArrayBtn();
+    enableSizeSlider();
+    enableSortingBtn();
 });

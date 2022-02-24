@@ -45,9 +45,17 @@ async function selectionSort(arr,  n)
 
 let selection = document.getElementById("selection");
 
-selection.addEventListener('click', () => {
+selection.addEventListener('click',async () => {
     let arr = document.querySelectorAll('.bar');
     let l = arr.length;
     console.log(arr);
-    selectionSort(arr, l);
+    disableNewArrayBtn();
+    disableSizeSlider();
+    disableSortingBtn();
+
+    await selectionSort(arr, l);
+
+    enableNewArrayBtn();
+    enableSizeSlider();
+    enableSortingBtn();
 })
