@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./sorting.css">
+
+</head>
+<body>
+    <h1 class="text-center heading">Sorting Visualizer</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+        <button id="new_array" type="button" class="btn btn-dark new-array">new array</button>
+        <span>
+            <label for="arr_sp" style="color: wheat">| Speed</label>
+           <input id="arr_sp" type="range" list="spmarks"  min=20 max=180 step=1 style="color: wheat;">
+           <!-- <input type="range" list="tickmarks" style="color: wheat;"> -->
+<datalist id="spmarks">
+<option value="0" label="0%"></option>
+<option value="10"></option>
+<option value="20"></option>
+<option value="30"></option>
+<option value="40"></option>
+<option value="50" label="50%"></option>
+<option value="60"></option>
+<option value="70"></option>
+<option value="80"></option>
+<option value="90"></option>
+<option value="100" label="100%"></option>
+<option value="110" label="100%"></option>
+<option value="120" label="100%"></option>
+<option value="130" label="100%"></option>
+<option value="140" label="100%"></option>
+<option value="150" label="100%"></option>
+<option value="160" label="100%"></option>
+<option value="170" label="100%"></option>
+<option value="180" label="100%"></option>
+
+</datalist>
+           
+   </span>   
+        <span>
+            <label for="arr_sz" style="color: wheat">| Bars</label>
+           <input id="arr_sz" type="range" list="tickmarks"  min=20 max=120 step=1 style="color: wheat;">
+           <!-- <input type="range" list="tickmarks" style="color: wheat;"> -->
+<datalist id="tickmarks">
+<option value="0" label="0%"></option>
+<option value="10"></option>
+<option value="20"></option>
+<option value="30"></option>
+<option value="40"></option>
+<option value="50" label="50%"></option>
+<option value="60"></option>
+<option value="70"></option>
+<option value="80"></option>
+<option value="90"></option>
+<option value="100" label="100%"></option>
+<option value="110" ></option>
+<option value="120" ></option>
+</datalist>
+           
+   </span>   
+        <div>
+        <button id="bubble" type="button" class="btn btn-dark bubble sort" >Bubble sort</button>
+        <button id="quick" type="button" class="btn btn-dark quick sort" >Quick sort</button>
+        <button id="merge" type="button" class="btn btn-dark merge sort" >Merger sort</button>
+        <button id="selection" type="button" class="btn btn-dark selection sort" >Selection sort</button>
+        <button id="insertion" type="button" class="btn btn-dark insertion sort" >Insertion sort</button>
+       
+    </div>
+    </div>
+    </nav>
+
+    <div id="bars" class="flex-container">
+    </div>
+    
+
+<script src="./js_files/sorting.js"></script>
+<script src="./js_files/bubble.js"></script>
+<script src="./js_files/insertion.js"></script>
+<script src="./js_files/merge.js"></script>
+<script src="./js_files/quick.js"></script>
+<script src="./js_files/selection.js"></script>
+
+</body>
+</html>
